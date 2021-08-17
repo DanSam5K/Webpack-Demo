@@ -5,6 +5,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: "production",
   entry: './src/index.js',
+  devServer: {
+    contentBase: './dist',
+  },  
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
@@ -23,3 +26,4 @@ module.exports = {
    ],
   },
 };
+
